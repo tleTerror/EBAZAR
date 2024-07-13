@@ -12,7 +12,7 @@ import cors from "cors";
 //configure env
 dotenv.config();
 
-const __dirname = path.resolve();
+// const __dirname = path.resolve();
 
 //databse config
 connectDB();
@@ -24,6 +24,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(morgan("dev"));
+app.use(express.static(path.join(__dirname, "./client/build")));
 
 //routes
 app.use("/api/v1/auth", authRoutes);
@@ -31,14 +32,19 @@ app.use("/api/v1/category", categoryRoutes);
 app.use("/api/v1/product", productRoutes);
 
 //rest api
-app.get("/", (req, res) => {
-  res.send("<h1>Welcome to ecommerce app</h1>");
-});
-app.use(express.static(path.join(__dirname, "/client","/build")));
+// app.get("/", (req, res) => {
+//   res.send("<h1>Welcome to ecommerce app</h1>");
+// });
 
-app.get("*", (req, res) => {
-	res.sendFile(path.join(__dirname, "client","/build","index.html"));
+
+
+app.use("*", function(req, res){
+	res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
+// app.get("/", (req, res) => {
+//   app.use(express.static(path.resolve(__dirname, "client", "build")));
+//   res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+// });
 
 //PORT
 const PORT = process.env.PORT || 8080;

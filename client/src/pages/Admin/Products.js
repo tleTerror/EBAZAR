@@ -4,6 +4,7 @@ import Layout from "./../../components/Layout/Layout";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
+// import "./Products.css";  
 const Products = () => {
   const [products, setProducts] = useState([]);
 
@@ -14,7 +15,7 @@ const Products = () => {
       setProducts(data.products);
     } catch (error) {
       console.log(error);
-      toast.error("Someething Went Wrong");
+      toast.error("Something Went Wrong");
     }
   };
 
@@ -41,6 +42,7 @@ const Products = () => {
                   <img
                     src={`/api/v1/product/product-photo/${p._id}`}
                     className="card-img-top"
+                    
                     alt={p.name}
                   />
                   <div className="card-body">

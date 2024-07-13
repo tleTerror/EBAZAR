@@ -1,11 +1,23 @@
 .banner-img {
   margin-top: 60px;
+  transform: scaleX(-1);
+  opacity: 0.85;
+  position:fixed; /* make it fixed so it doesn't move when scrolling */
+  top: 0; /* top edge of the image should be at the top of the page */
+  left: 0; /* left edge of the image should be at the left of the page */
+  width: 100%; /* make it full width */
+  height: 100vh; /* make it full height of the viewport */
+  z-index: -1; /* send it to the back so other elements are on top */
+  margin-top: 0;
 }
 
 .home-page h1 {
   color: gray;
   font-family: "Playfair Display", serif;
+  z-index: 1;
+  position: relative;
 }
+
 
 .home-page {
   display: flex;
@@ -19,6 +31,10 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  
+}
+.home-page .btn btn-info ms-1{
+  background-color: #4a0000;
 }
 
 .home-page .card-price {
@@ -35,7 +51,7 @@
 }
 
 .home-page .card-text {
-  color: rgb(90, 89, 89);
+  color: rgb(255, 255, 255);
 }
 
 .home-page .card img:hover {

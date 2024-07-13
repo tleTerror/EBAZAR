@@ -7,19 +7,15 @@ const Policy = () => {
       <div className="row contactus ">
         <div className="col-md-6 ">
           <img
-            src="/images/contactus.jpeg"
-            alt="contactus"
-            style={{ width: "100%" }}
+            src="/images/privacy.jpg"
+            alt="Privacy Policy"
+            style={{ width: "50%" }}
+            
           />
+          
         </div>
         <div className="col-md-4">
-          <p>add privacy policy</p>
-          <p>add privacy policy</p>
-          <p>add privacy policy</p>
-          <p>add privacy policy</p>
-          <p>add privacy policy</p>
-          <p>add privacy policy</p>
-          <p>add privacy policy</p>
+        <p>There is no Privacy for the Time Being.</p>
         </div>
       </div>
     </Layout>

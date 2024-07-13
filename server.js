@@ -2,6 +2,7 @@ import express from "express";
 import colors from "colors";
 import dotenv from "dotenv";
 import morgan from "morgan";
+import path from "path";
 import connectDB from "./config/db.js";
 import authRoutes from "./routes/authRoute.js";
 import categoryRoutes from "./routes/categoryRoutes.js";
@@ -10,6 +11,8 @@ import cors from "cors";
 
 //configure env
 dotenv.config();
+
+const __dirname = path.resolve();
 
 //databse config
 connectDB();
@@ -30,6 +33,11 @@ app.use("/api/v1/product", productRoutes);
 //rest api
 app.get("/", (req, res) => {
   res.send("<h1>Welcome to ecommerce app</h1>");
+});
+app.use(express.static(path.join(__dirname, "/client","/build")));
+
+app.get("*", (req, res) => {
+	res.sendFile(path.join(__dirname, "client","/build","index.html"));
 });
 
 //PORT

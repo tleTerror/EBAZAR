@@ -5,21 +5,27 @@ Live Website Link: https://ebazaar-sable.vercel.app/
 Welcome to **eBaZaar** ! Explore a transformative online marketplace tailored for both retailers and wholesalers.Looking for  Admin Functionality where you can freely upload your products for sale and enjoy buying your favourite products as a customer. This is the website for you to visit.
 
 
-## Demo:
+## SOme Demo Pages:
+
+- Home page:
+
+    <img src="client/public/images/Screenshot 2024-07-14 111324.png" width="650" height="auto">
+
+    
+- Register page:
+
+    <img src="client/public/images/Screenshot 2024-07-14 111347.png" width="650" height="auto">
+
 
 - Login page:
 
-    <img src="frontend/public/Screenshot 2024-07-14 110346.png" width="650" height="auto">
+    <img src="client/public/images/Screenshot 2024-07-14 111358.png" width="650" height="auto">
 
-    
-- SignUp page:
+- Cart Page(without Login):
 
-    <img src="frontend/public/Screenshot 2024-07-14 110402.png" width="650" height="auto">
+    <img src="client/public/images/Screenshot 2024-07-14 111422.png" width="650" height="auto">
 
 
-- Chat room:
-
-    <img src="frontend/public/Screenshot 2024-07-14 110513.png" width="650" height="auto">
 
 
 ## Technologies Used
